@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+    margin-top: 100px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 0 100px;
+    background: url('https://wallpaperforu.com/wp-content/uploads/2020/04/639672.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd; text-align:center">
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Square Root</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Score Conversion<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/hypotenuse">Hypotenuse</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="justify-content-md-center">
+    <form>
+        <!-- <input type="number" id="score"/>
+        <input type="button" id="btnClick" onclick="scoreConv()" value="Score"/> -->
+        
+        <!-- <input type="text" id="convert_score_result" name="convert_score_result" placeholder="Your grade is here" readonly> -->
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Input your Number</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="score">
+          </div>
+          
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Conversion Result</span>
+            </div>
+            <input type="text" id="convert_score_result" name="convert_score_result" placeholder="Result" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"  readonly>
+        </div>
+
+            <button type="button" class="btn btn-primary" id="btnClick" onClick="scoreConv()" value="Score">Convert</button>
+        
+        
+        <div id="result"></div>
+    </form>
+    </div>
+    
+</body>
